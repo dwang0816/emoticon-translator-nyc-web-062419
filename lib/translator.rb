@@ -17,3 +17,8 @@ def get_japanese_emoticon(path, emo)
   dictionary['get_emoticon'][emo] ? dictionary['get_emoticon'][emo] : "Sorry, that emoticon was not found"
 end
 
+def get_english_meaning(path, emo)
+  # code goes here	  # code goes here
+  dictionary = load_library(path)
+  dictionary['get_meaning'][emo] ? dictionary['get_meaning'][emo] : "Sorry, that emoticon was not found"
+end
