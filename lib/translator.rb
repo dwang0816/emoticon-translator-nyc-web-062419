@@ -11,3 +11,9 @@ def load_library(path)
   result
 end
 
+def get_japanese_emoticon(path, emo)
+  # code goes here	  # code goes here
+  dictionary = load_library(path)
+  dictionary['get_emoticon'][emo] ? dictionary['get_emoticon'][emo] : "Sorry, that emoticon was not found"
+end
+
