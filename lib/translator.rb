@@ -1,3 +1,5 @@
+def load_library(path)
+  # code goes here	 # code goes here
   get_emoticon = {}
   get_meaning = {}
   YAML.load_file(path).each do |k, v|
@@ -8,3 +10,4 @@
   result["get_meaning"] = get_meaning
   result["get_emoticon"] = get_emoticon
   result
+end	end
