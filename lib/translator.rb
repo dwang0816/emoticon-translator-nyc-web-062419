@@ -1,6 +1,6 @@
 # require modules here
 require "yaml"
-def load_library
+def load_library(lib)
   # code goes here
   ontain = {"get_meaning"=>{},"get_emoticon"=>{}} 
   emoticons = YAML.load_file lib
