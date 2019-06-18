@@ -23,4 +23,10 @@ end
 
 def get_english_meaning
   # code goes here
+  check_hash = load_library lib
+  if check_hash["get_meaning"][emoticon]
+    check_hash["get_meaning"][emoticon]
+  else
+    "Sorry, that emoticon was not found"
+  end
 end
