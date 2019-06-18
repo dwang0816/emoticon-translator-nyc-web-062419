@@ -3,7 +3,7 @@ require "yaml"
 def load_library(lib)
   # code goes here
   ontain = {"get_meaning"=>{},"get_emoticon"=>{}} 
-  emoticons = YAML.load_file lib
+  emoticons = YAML.load_file(lib)
   emoticons.each do |define,arr|
     contain["get_meaning"][arr[1]] = define
     contain["get_emoticon"][arr[0]] = arr[1]
@@ -13,7 +13,7 @@ end
 
 def get_japanese_emoticon(lib, emoticon)
   # code goes here
-    check_hash = load_library lib
+    check_hash = load_library(lib)
   if check_hash["get_emoticon"][emoticon]
     check_hash["get_emoticon"][emoticon]
   else
@@ -23,7 +23,7 @@ end
 
 def get_english_meaning(lib, emoticon)
   # code goes here
-  check_hash = load_library lib
+  check_hash = load_library(lib)
   if check_hash["get_meaning"][emoticon]
     check_hash["get_meaning"][emoticon]
   else
