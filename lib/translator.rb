@@ -11,7 +11,7 @@ def load_library
   contain
 end
 
-def get_japanese_emoticon
+def get_japanese_emoticon(lib, emoticon)
   # code goes here
     check_hash = load_library lib
   if check_hash["get_emoticon"][emoticon]
@@ -21,7 +21,7 @@ def get_japanese_emoticon
   end
 end
 
-def get_english_meaning
+def get_english_meaning(lib, emoticon)
   # code goes here
   check_hash = load_library lib
   if check_hash["get_meaning"][emoticon]
